@@ -1,0 +1,10 @@
+{
+  "base": "USD",
+  "date": "2020-09-05",
+  "rates": [
+    {"shortName": "CAD", "rate": 1.30618},
+    {"shortName": "CHF", "rate": 0.913145},
+    {"shortName": "EUR", "rate": 0.844675},
+    {"shortName": "GBP", "rate": 0.752474}
+  ]
+}
