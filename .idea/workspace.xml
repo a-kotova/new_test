@@ -20,14 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d402ab85-6e81-4b02-98b9-6ca1b162a3d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cypress/tests/12.4_weakMap_weakSet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/tests/13_Conditions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/tests/19_Async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/fixtures/item.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/fixtures/products.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/page-objects/GoogleCart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/page-objects/GoogleStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/tests/20_1_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/tests/20_2_test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/tests/Arrays.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/tests/12.2.9_Arrays.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/tests/CurrencyConverter.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/tests/12.2.10_CurrencyConverter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/tests/Maps.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/tests/12.3_Maps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/tests/Sets.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/tests/12.1_Sets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/support/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/support/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +56,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cypress/fixtures" />
+    <property name="javascript.nodejs.core.library.configured.version" value="13.5.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="13.5.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../website" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -119,7 +124,20 @@
       <workItem from="1599406733359" duration="5953000" />
       <workItem from="1599470053452" duration="923000" />
       <workItem from="1600110064851" duration="5170000" />
-      <workItem from="1600285837738" duration="3313000" />
+      <workItem from="1600285837738" duration="4100000" />
+      <workItem from="1600456080728" duration="3137000" />
+      <workItem from="1600525193690" duration="10559000" />
+      <workItem from="1600710221179" duration="6969000" />
+      <workItem from="1601321813860" duration="2605000" />
+      <workItem from="1601401024358" duration="8166000" />
+      <workItem from="1602871304259" duration="9902000" />
+      <workItem from="1602919500994" duration="19217000" />
+      <workItem from="1603130169393" duration="7246000" />
+      <workItem from="1603532304851" duration="323000" />
+      <workItem from="1603997294528" duration="4140000" />
+      <workItem from="1604079739093" duration="5352000" />
+      <workItem from="1604163366155" duration="7326000" />
+      <workItem from="1604343197613" duration="698000" />
     </task>
     <servers />
   </component>
@@ -147,10 +165,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599327797759" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599306491693">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604343265209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599306491693" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604343265209" />
     <state width="1899" height="284" key="GridCell.Tab.0.bottom" timestamp="1600113273680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -215,6 +233,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599391524796" />
+    <state x="569" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600719095620">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="569" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600719095620" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599470944057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
