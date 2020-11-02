@@ -20,17 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d402ab85-6e81-4b02-98b9-6ca1b162a3d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cypress/fixtures/item.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/fixtures/products.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/page-objects/GoogleCart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/page-objects/GoogleStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/tests/20_1_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/tests/20_2_test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/support/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/support/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/tests/20_1_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/tests/20_1_test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +127,7 @@
       <workItem from="1603997294528" duration="4140000" />
       <workItem from="1604079739093" duration="5352000" />
       <workItem from="1604163366155" duration="7326000" />
-      <workItem from="1604343197613" duration="698000" />
+      <workItem from="1604343197613" duration="1040000" />
     </task>
     <servers />
   </component>
