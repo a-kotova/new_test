@@ -1,6 +1,5 @@
 import Chance from 'chance';
 const chance = new Chance();
-import item from '../tests/20_1_test';
 
 class Store {
     open () {
@@ -27,88 +26,37 @@ class Store {
         return cy.get('.mqn-product-collection__card__meta');
     }
 
-    get Cart () {
-        return cy.get('[data-default-aria-label]');
-    }
-
-    get goToCart () {
-        return cy.get('.mdc-button__ripple').first();
-    }
-
-    proceedToCart (item) {
-        cy.get('div[jsname="r4nke"] > h1').invoke('text').then((text) => {
-            item.name = text;
-            cy.writeFile('cypress/fixtures/item.json', item);
-        });
-        cy.get('.is-price').first().invoke('text').then((text) => {
-            item.price = parseFloat(text.replace('$', ''));
-            cy.writeFile('cypress/fixtures/item.json', item);
-        });
+    clickBuyCTA () {
         this.buyCTA.click();
-        return item;
     }
 
-    selectColor (item) {
-        this.Colors.then(colorOptions => {
-            cy.get('.navigation > div').invoke('text').then((text) => {
-                item.name = text;
-                cy.writeFile('cypress/fixtures/item.json', item);
-            });
-            cy.wrap(chance.pickone(colorOptions)).then(selectedColor => {
-                cy.wrap(selectedColor).find('.mqn-product-collection__card__header > .mqn-product-collection__card__headline').invoke('text').then((text) => {
-                    item.color = text;
-                    cy.writeFile('cypress/tests/task20', item);
-                });
-                cy.wrap(selectedColor).find('.mqn-product-collection__card__price > span').invoke('text').then((text) => {
-                    item.price = parseFloat(text.replace('$', ''));
-                    cy.writeFile('cypress/fixtures/item.json', item);
-                });
-                cy.wrap(selectedColor).find('.mqn-product-collection__card__buttons > button').click();
-            });
-        })
-        return item;
+    getProductName (item) {
+        cy.get('div[jsname="r4nke"] > h1').invoke('text').then((text) => {
+        item['name'] = text;
+        });
     }
+
+    getProductPrice (item) {
+        cy.get('.is-price').first().invoke('text').then((text) => {
+        item['price'] = parseFloat(text.replace('$', ''));
+        });
+    }
+
+    getColorTitle (item, index) {
+        cy.get('.mqn-product-collection__card__headline').eq(index).invoke('text').then((text) => {
+            item['color'] = text;
+        })
+    }
+
+    getColorPrice (item, index) {
+        cy.get('.is-price').eq(index).invoke('text').then((text) => {
+            item['price'] = parseFloat(text.replace('$', ''));
+        })
+    }
+
+    buyColor (index) {
+        cy.get('.mqn-button').eq(index).click();
+    }
+
 }
 export default new Store ();
-
-
-//  () {
-//
-//     cy.find('.is-price').first().invoke('text').then((text) => {
-//         item.price = text;
-//         cy.writeFile('../tests/task20', item);
-//     });
-// }
-//
-// selectSize (item) {
-//     this.Sizes.then(sizeOptions => {
-//         cy.wrap(chance.pickone(sizeOptions)).then(selectedSize => {
-//             cy.wrap(selectedSize).find('.mqn-lobby__card__header > .mqn-lobby__card__subtitle').invoke('text').then((text) => {
-//                 item.size = text;
-//                 cy.writeFile('../tests/task20', item);
-//             });
-//             cy.wrap(selectedSize).find('.mqn-lobby__card__price > span > span').invoke('text').then((text) => {
-//                 item.price = text;
-//                 cy.writeFile('../tests/task20', item);
-//             });
-//             cy.wrap(selectedSize).find('.mqn-lobby__card__buttons > button').click();
-//         });
-//     });
-//     return item;
-// }
-//
-// get Name () {
-//     return cy.get('div[jsname="r4nke"] > h1');
-// }
-//
-// get Price () {
-//     return cy.get('.is-price').first();
-// }
-//
-// get Sizes () {
-//     return cy.get('.mqn-lobby__card__meta');
-// }
-//
-// get searchResultTitle () {
-//     return cy.get('.card-link-target .product-text').first();
-// }

@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d402ab85-6e81-4b02-98b9-6ca1b162a3d4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/fixtures/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/fixtures/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/page-objects/GoogleStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/page-objects/GoogleStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cypress/tests/20_1_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/tests/20_1_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/tests/20_2_test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +133,10 @@
       <workItem from="1603997294528" duration="4140000" />
       <workItem from="1604079739093" duration="5352000" />
       <workItem from="1604163366155" duration="7326000" />
-      <workItem from="1604343197613" duration="1040000" />
+      <workItem from="1604343197613" duration="1638000" />
+      <workItem from="1604835486645" duration="4095000" />
+      <workItem from="1604851265076" duration="8350000" />
+      <workItem from="1604951351956" duration="6905000" />
     </task>
     <servers />
   </component>
