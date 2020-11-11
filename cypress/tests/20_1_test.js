@@ -6,30 +6,26 @@ const chance = new Chance();
 describe ('User adds products to cart', () => {
 
     it('US_1: User is able to add single and multiple color product to the cart', () => {
+
         cy.fixture('products').then(scope => {
-            scope.goods.forEach(products => {
-                let item = {};
+            scope.goods.forEach(product => {
+
                 cy.log('GIVEN user is at Accessories page');
                 Store.open();
                 cy.log('WHEN user performs search');
                 Store.searchIcon.click();
-                Store.searchInput.type(`${products.name}{enter}`);
+                Store.searchInput.type(`${product.name}{enter}`);
                 cy.log('AND adds product to the cart');
                 Store.searchResult.click();
-                if (products.color == "yes") {
-                    Store.getProductName(item);
-                    Store.clickBuyCTA();
-                    Store.Colors.then(colors => {
-                        let random = chance.integer({min: 0, max: 1});//colors.length-1});
-                        Store.getColorTitle(item, random);
-                        Store.getColorPrice(item, random);
+                getProductsData(product).then(productData => {
+                    if (productData.isMulticolor) {
                         Store.buyColor(random);
-                    })
-                } else {
-                    Store.getProductName(item);
-                    Store.getProductPrice(item)
-                    Store.clickBuyCTA();
-                }
+                    } else {
+                        Store.clickBuyCTA();
+                    }
+                });
+                //
+                // Store.clickBuyCTA();
                 cy.log(item);
                 cy.log(JSON.stringify(item))
                 // cy.log('THEN added product is displayed in the cart');
@@ -62,3 +58,22 @@ describe ('User adds products to cart', () => {
         })
     })
 })
+
+const getProductsData = (product) => {
+    let item = { ...product };
+
+    if (item.isMulticolor) {
+        Store.getProductName(item);
+        Store.clickBuyCTA();
+        Store.activeColors.then(colors => {
+            let random = chance.integer({min: 0, max: colors.length-1});
+            Store.getColorTitle(item, random);
+            Store.getColorPrice(item, random);
+        })
+    } else {
+        Store.getProductName(item);
+        Store.getProductPrice(item);
+    }
+
+    return item;
+};

@@ -8,7 +8,7 @@
       "start_time": "10:30",
       "start_ts": 1575397800,
       "url": "/product/dbrand_skins_for_pixelbook_go",
-      "color": "yes"
+      "isMulticolor": true
     },
     {
       "name": "Nest Cam Indoor Power Adapter",
@@ -18,7 +18,7 @@
       "start_time": "10:30",
       "start_ts": 1550255400,
       "url": "/product/nest_cam_power_adapter",
-      "color": "no"
+      "isMulticolor": false
     }
   ]
 }

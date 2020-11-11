@@ -22,8 +22,9 @@ class Store {
         return cy.get('.primary.transaction.button').first();
     }
 
-    get Colors () {
-        return cy.get('.mqn-product-collection__card__meta');
+    get activeColors () {
+        return cy.get('.mqn-button:not([disabled="disabled"])')
+          .parents('.mqn-product-collection__card__meta');
     }
 
     clickBuyCTA () {
@@ -32,13 +33,13 @@ class Store {
 
     getProductName (item) {
         cy.get('div[jsname="r4nke"] > h1').invoke('text').then((text) => {
-        item['name'] = text;
+            item['title'] = text;
         });
     }
 
     getProductPrice (item) {
         cy.get('.is-price').first().invoke('text').then((text) => {
-        item['price'] = parseFloat(text.replace('$', ''));
+            item['price'] = parseFloat(text.replace('$', ''));
         });
     }
 
