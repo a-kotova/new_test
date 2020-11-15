@@ -32,7 +32,7 @@ describe ('User adds products to cart', () => {
                 }
                 cy.get('body').then(() => {
                     cy.log('THEN added product is displayed in the cart')
-                        Cart.productName.should('include.text', item.name)
+                        Cart.productName.should('include.text', item.title)
                         if (item.color === undefined) {
                         } else {
                             cy.log('AND product has correct color')
