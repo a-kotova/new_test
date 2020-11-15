@@ -22,9 +22,43 @@
     <list default="true" id="d402ab85-6e81-4b02-98b9-6ca1b162a3d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cypress/fixtures/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/fixtures/products.json" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/cypress/page-objects/GoogleStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/page-objects/GoogleStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cypress/tests/20_1_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/tests/20_1_test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/actions.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/aliasing.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/assertions.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/connectors.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/cookies.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/cypress_api.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/files.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/local_storage.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/location.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/misc.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/navigation.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/network_requests.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/querying.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/spies_stubs_clocks.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/traversal.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/utilities.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/viewport.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/waiting.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/window.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/page-objects/CurrencyExchange.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/page-objects/CurrencyExchange.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/page-objects/GoogleCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/page-objects/GoogleCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/page-objects/GoogleStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/page-objects/GoogleStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/page-objects/arrayClass.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/page-objects/arrayClass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/tests/12.1_Sets.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/tests/12.1_Sets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/tests/12.2.10_CurrencyConverter.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/tests/12.2.10_CurrencyConverter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/tests/12.2.9_Arrays.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/tests/12.2.9_Arrays.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/tests/12.3_Maps.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/tests/12.3_Maps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/tests/12.4_weakMap_weakSet.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/tests/12.4_weakMap_weakSet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/tests/13_Conditions.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/tests/13_Conditions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/tests/19_Async.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/tests/19_Async.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/tests/20_1_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/tests/20_1_test.js" afterDir="false" />
+>>>>>>> Finishing task 20_1
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -170,12 +204,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\Projects\new_test\cypress\fixtures" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Projects\new_test\cypress\integration" />
       <recent name="G:\Projects\new_test\cypress\tests" />
       <recent name="G:\Projects\new_test\cypress" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Projects\new_test\cypress\fixtures" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -191,16 +226,16 @@
     </option>
   </component>
   <component name="RunManager" selected="Node.js.13_Conditions.js">
-    <configuration name="12.1_Sets.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cypress/tests/12.1_Sets.js" working-dir="$PROJECT_DIR$/cypress/tests">
+    <configuration name="12.1_Sets.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cypress/integration/tests/12.1_Sets.js" working-dir="$PROJECT_DIR$/cypress/integration/tests">
       <method v="2" />
     </configuration>
-    <configuration name="12.2.10_CurrencyConverter.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cypress/tests/12.2.10_CurrencyConverter.js" working-dir="$PROJECT_DIR$/cypress/tests">
+    <configuration name="12.2.10_CurrencyConverter.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cypress/integration/tests/12.2.10_CurrencyConverter.js" working-dir="$PROJECT_DIR$/cypress/integration/tests">
       <method v="2" />
     </configuration>
-    <configuration name="12.3_Maps.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cypress/tests/12.3_Maps.js" working-dir="$PROJECT_DIR$/cypress/tests">
+    <configuration name="12.3_Maps.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cypress/integration/tests/12.3_Maps.js" working-dir="$PROJECT_DIR$/cypress/integration/tests">
       <method v="2" />
     </configuration>
-    <configuration name="13_Conditions.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cypress/tests/13_Conditions.js" working-dir="$PROJECT_DIR$/cypress/tests">
+    <configuration name="13_Conditions.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cypress/integration/tests/13_Conditions.js" working-dir="$PROJECT_DIR$/cypress/integration/tests">
       <method v="2" />
     </configuration>
     <configuration name="helpers.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cypress/utils/helpers.js" working-dir="$PROJECT_DIR$/cypress/utils">
@@ -263,8 +298,14 @@
       <workItem from="1604343197613" duration="1638000" />
       <workItem from="1604835486645" duration="4095000" />
       <workItem from="1604851265076" duration="8350000" />
+<<<<<<< HEAD
       <workItem from="1604951351956" duration="6905000" />
       <workItem from="1605001801356" duration="5239000" />
+=======
+      <workItem from="1604951351956" duration="7216000" />
+      <workItem from="1605292747617" duration="1885000" />
+      <workItem from="1605437326443" duration="1790000" />
+>>>>>>> Finishing task 20_1
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-import {isSuperSet, Union, Intersection, Difference} from '../utils/helpers.js';
+import {isSuperSet, Union, Intersection, Difference} from '../../utils/helpers.js';
 import Chance from 'chance';
 const chance = new Chance();
 

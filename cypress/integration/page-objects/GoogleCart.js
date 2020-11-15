@@ -19,6 +19,10 @@ class Cart {
         return cy.get('.button-text');
     }
 
+    get cartTitle () {
+        return  cy.get('.your-cart-is-empty')
+    }
+
     removeProduct() {
         this.removeBtn.click();
     }
