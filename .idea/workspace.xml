@@ -19,6 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="d402ab85-6e81-4b02-98b9-6ca1b162a3d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cypress/fixtures/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/fixtures/products.json" afterDir="false" />
@@ -64,6 +65,9 @@
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+=======
+    <list default="true" id="d402ab85-6e81-4b02-98b9-6ca1b162a3d4" name="Default Changelist" comment="" />
+>>>>>>> Task 20_1 resolving confilcts
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -304,8 +308,12 @@
 =======
       <workItem from="1604951351956" duration="7216000" />
       <workItem from="1605292747617" duration="1885000" />
+<<<<<<< HEAD
       <workItem from="1605437326443" duration="1790000" />
 >>>>>>> Finishing task 20_1
+=======
+      <workItem from="1605437326443" duration="2236000" />
+>>>>>>> Task 20_1 resolving confilcts
     </task>
     <servers />
   </component>
