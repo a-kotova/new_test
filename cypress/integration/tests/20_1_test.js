@@ -19,11 +19,13 @@ describe ('User adds products to cart', () => {
                 if (product.color) {
                     Store.getProductName(item)
                     Store.clickBuyCTA()
-                    Store.activeColors.then(colors => {
-                        let random = chance.integer({min: 0, max: colors.length-1})
-                        Store.getColorTitle(item, random)
-                        Store.getColorPrice(item, random)
-                        Store.buyColor(random)
+                    cy.get('body').then(() => {
+                        Store.activeColors.then(colors => {
+                            let random = chance.integer({min: 0, max: colors.length-1})
+                            Store.getColorTitle(item, random)
+                            Store.getColorPrice(item, random)
+                            Store.buyColor(random)
+                        })
                     })
                 } else {
                     Store.getProductName(item)
