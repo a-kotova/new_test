@@ -4,5 +4,5 @@
   "viewportHeight": 768,
   "baseUrl": "https://xe.com/currencyconverter",
   "video": false,
-  "defaultCommandTimeout": 12000
+  "defaultCommandTimeout": 30000
 }

@@ -16,7 +16,7 @@ class Cart {
     }
 
     get removeBtn () {
-        return cy.get('.button-text');
+        return cy.get('button[jsname="uXqWSe"]');
     }
 
     get cartTitle () {

@@ -28,7 +28,11 @@ class Store {
     }
 
     clickBuyCTA () {
-        this.buyCTA.click();
+        return this.buyCTA.click();
+    }
+
+    navToProductPage () {
+        return this.searchResult.click();
     }
 
     getProductName (item) {
@@ -38,26 +42,30 @@ class Store {
     }
 
     getProductPrice (item) {
-        cy.get('.is-price').first().invoke('text').then((text) => {
+        return cy.get('.is-price').first().invoke('text').then((text) => {
             item['price'] = parseFloat(text.replace('$', ''));
         });
     }
 
-    getColorTitle (item, index) {
-        cy.get('.mqn-product-collection__card__headline').eq(index).invoke('text').then((text) => {
-            item['color'] = text;
+    buyAnyColor (item) {
+        cy.contains("Pick your color").should("be.visible");
+        this.activeColors.then(colorContainers => {
+            cy.wrap(chance.pickone(colorContainers)).then((colorContainer) => {
+                cy.wrap(colorContainer).find('.mqn-product-collection__card__headline').invoke('text').then((text) => {
+                    item['color'] = text;
+                    cy.log(item.color)
+                })
+                cy.wrap(colorContainer).find('div.mqn-product-collection__card__buttons > button').click()
+            })
         })
     }
 
-    getColorPrice (item, index) {
-        cy.get('.is-price').eq(index).invoke('text').then((text) => {
-            item['price'] = parseFloat(text.replace('$', ''));
+    buyProduct(product, item) {
+        this.clickBuyCTA().then(() => {
+            if(product.color) {
+                this.buyAnyColor(item)
+            }
         })
     }
-
-    buyColor (index) {
-        cy.get('.mqn-button').eq(index).click();
-    }
-
 }
 export default new Store ();
