@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Nest Thermostat E Steel Plate",
+    "price": null,
+    "cart_qty": 1,
+    "order": 232,
+    "staging": false,
+    "start_date": "2019-02-15",
+    "start_time": "10:30",
+    "start_ts": 1550255400,
+    "url": "/product/plate_for_thermostat_e"
+  },
+  {
+    "name": "Mophie Single Pad Charger",
+    "price": null,
+    "cart_qty": 1,
+    "order": 76,
+    "staging": true,
+    "start_date": "2019-12-03",
+    "start_time": "10:30",
+    "start_ts": 1575397800,
+    "url": "/product/mophie_single_pad_charger"
+  }
+]

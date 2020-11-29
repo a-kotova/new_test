@@ -2,8 +2,12 @@ import Chance from 'chance';
 const chance = new Chance();
 
 class Store {
-    open () {
-        cy.visit('https://store.google.com/us/collection/accessories_wall?hl=en-US')
+    openProductPage(product) {
+        cy.visit(product)
+    }
+
+    openAccessoriesPage () {
+        cy.visit('/collection/accessories_wall?hl=en-US')
     }
 
     get searchIcon () {
@@ -24,7 +28,7 @@ class Store {
 
     get activeColors () {
         return cy.get('.mqn-button:not([disabled="disabled"])')
-          .parents('.mqn-product-collection__card__meta');
+            .parents('.mqn-product-collection__card__meta');
     }
 
     clickBuyCTA () {
@@ -66,6 +70,19 @@ class Store {
                 this.buyAnyColor(item)
             }
         })
+    }
+
+    getPrice () {
+        return cy.get('.is-was-price-text').invoke('text').then((text) => {
+            let price = parseFloat(text.replace('$', ''));
+            return cy.wrap(price)
+        });
+    }
+
+    getTitle () {
+        return cy.get('div[jsname="r4nke"] > h1').invoke('text').then((title) => {
+            return cy.wrap(title)
+        });
     }
 }
 export default new Store ();
