@@ -31,20 +31,20 @@ class Cart {
         return cy.visit('/cart')
     }
 
-    countTotalPrice (array) {
-        let prices = array.map(product => product.price * product.cart_qty);
+    countTotalPrice (products_array) {
+        let prices = products_array.map(product => product.price * product.cart_qty);
         let total = prices.reduce((sum, current) => sum + current)
         total = Math.round(total * 100) / 100
         return total
     }
 
-    increaseProductsQuantity (array) {
-        array.forEach((product, index) => {
+    increaseProductsQuantity (products_array) {
+        products_array.forEach((product, index) => {
             cy.get('select').eq(index).find('option:not([selected="true"])').invoke('text').then((options) => {
                 let selected = chance.pickone(options)
-                array[index].cart_qty = selected
+                products_array[index].cart_qty = selected
                 cy.get('select').eq(index).select(selected)
-                cy.contains(this.countTotalPrice(array)).should('be.visible')
+                cy.contains(this.countTotalPrice(products_array)).should('be.visible')
             })
         })
     }

@@ -39,25 +39,25 @@ class Store {
         return this.searchResult.click();
     }
 
-    getProductName (item) {
+    getProductName (item_object) {
         cy.get('div[jsname="r4nke"] > h1').invoke('text').then((text) => {
-            item['title'] = text;
+            item_object['title'] = text;
         });
     }
 
-    getProductPrice (item) {
+    getProductPrice (item_object) {
         return cy.get('.is-price').first().invoke('text').then((text) => {
-            item['price'] = parseFloat(text.replace('$', ''));
+            item_object['price'] = parseFloat(text.replace('$', ''));
         });
     }
 
-    buyAnyColor (item) {
+    buyAnyColor (item_object) {
         cy.contains("Pick your color").should("be.visible");
         this.activeColors.then(colorContainers => {
             cy.wrap(chance.pickone(colorContainers)).then((colorContainer) => {
                 cy.wrap(colorContainer).find('.mqn-product-collection__card__headline').invoke('text').then((text) => {
-                    item['color'] = text;
-                    cy.log(item.color)
+                    item_object['color'] = text;
+                    cy.log(item_object.color)
                 })
                 cy.wrap(colorContainer).find('div.mqn-product-collection__card__buttons > button').click()
             })
