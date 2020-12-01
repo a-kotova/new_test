@@ -36,7 +36,7 @@ describe('User able to change products quantity', () => {
                     });
                 })
                 cy.log("WHEN user changes product's quantity" )
-                Cart.increaseProductsQty(products)
+                Cart.increaseProductsQuantity(products)
                 cy.log('THEN total price is re-calculated properly' )
                 Cart.getTotalPrice().then((total) => {
                     expect(total).to.eq(Cart.countTotalPrice(products))
