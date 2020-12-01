@@ -31,14 +31,10 @@ class Cart {
         return cy.visit('/cart')
     }
 
-    get itemsQty () {
-        return cy.get('span[jsname="tTRCb"]').first();
-    }
-
     countTotalPrice (array) {
-        let prices = array.map(product => product.price*product.cart_qty);
+        let prices = array.map(product => product.price * product.cart_qty);
         let total = prices.reduce((sum, current) => sum + current)
-        total = +total.toFixed(2)
+        total = Math.round(total * 100) / 100
         return total
     }
 
@@ -48,7 +44,8 @@ class Cart {
                 let selected = chance.pickone(options)
                 array[index].cart_qty = selected
                 cy.get('select').eq(index).select(selected)
-                cy.wait(Cypress.env('cartReloadTimeout'))
+                cy.wait(5000)
+                cy.wrap(this.countTotalPrice(array)).should('eq', ))
             })
         })
     }
