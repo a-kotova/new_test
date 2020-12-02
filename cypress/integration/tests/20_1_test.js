@@ -7,7 +7,7 @@ describe('User adds products to cart', () => {
       scope.goods.forEach(product => {
         let item = {};
         cy.log('GIVEN user is at Accessories page');
-        Store.open();
+        Store.openAccessoriesPage();
         cy.log('WHEN user performs search');
         Store.searchIcon.click();
         Store.searchInput.type(`${product.name}{enter}`);

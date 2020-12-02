@@ -2,8 +2,12 @@ import Chance from 'chance';
 const chance = new Chance();
 
 class Store {
-    open () {
-        cy.visit('https://store.google.com/us/collection/accessories_wall?hl=en-US')
+    openProductPage(product) {
+        cy.visit(product)
+    }
+
+    openAccessoriesPage () {
+        cy.visit('/collection/accessories_wall?hl=en-US')
     }
 
     get searchIcon () {
@@ -24,7 +28,7 @@ class Store {
 
     get activeColors () {
         return cy.get('.mqn-button:not([disabled="disabled"])')
-          .parents('.mqn-product-collection__card__meta');
+            .parents('.mqn-product-collection__card__meta');
     }
 
     clickBuyCTA () {
@@ -35,25 +39,25 @@ class Store {
         return this.searchResult.click();
     }
 
-    getProductName (item) {
+    getProductName (item_object) {
         cy.get('div[jsname="r4nke"] > h1').invoke('text').then((text) => {
-            item['title'] = text;
+            item_object['title'] = text;
         });
     }
 
-    getProductPrice (item) {
+    getProductPrice (item_object) {
         return cy.get('.is-price').first().invoke('text').then((text) => {
-            item['price'] = parseFloat(text.replace('$', ''));
+            item_object['price'] = parseFloat(text.replace('$', ''));
         });
     }
 
-    buyAnyColor (item) {
+    buyAnyColor (item_object) {
         cy.contains("Pick your color").should("be.visible");
         this.activeColors.then(colorContainers => {
             cy.wrap(chance.pickone(colorContainers)).then((colorContainer) => {
                 cy.wrap(colorContainer).find('.mqn-product-collection__card__headline').invoke('text').then((text) => {
-                    item['color'] = text;
-                    cy.log(item.color)
+                    item_object['color'] = text;
+                    cy.log(item_object.color)
                 })
                 cy.wrap(colorContainer).find('div.mqn-product-collection__card__buttons > button').click()
             })
@@ -66,6 +70,19 @@ class Store {
                 this.buyAnyColor(item)
             }
         })
+    }
+
+    getPrice () {
+        return cy.get('.is-was-price-text').invoke('text').then((text) => {
+            let price = parseFloat(text.replace('$', ''));
+            return cy.wrap(price)
+        });
+    }
+
+    getTitle () {
+        return cy.get('div[jsname="r4nke"] > h1').invoke('text').then((title) => {
+            return cy.wrap(title)
+        });
     }
 }
 export default new Store ();
