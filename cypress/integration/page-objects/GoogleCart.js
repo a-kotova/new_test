@@ -40,10 +40,10 @@ class Cart {
 
     increaseProductsQuantity (products_array) {
         products_array.forEach((product, index) => {
-            cy.get('select').eq(index).find('option:not([selected="true"])').invoke('text').then((options) => {
-                let selected = chance.pickone(options)
-                products_array[index].cart_qty = selected
-                cy.get('select').eq(index).select(selected)
+            cy.get('select').eq(index).find('option').then((options) => {
+                let selected_quantity = chance.integer({min:2, max: options.length})
+                products_array[index].cart_qty = selected_quantity
+                cy.get('select').eq(index).select(`${selected_quantity}`)
                 cy.contains(this.countTotalPrice(products_array)).should('be.visible')
             })
         })
