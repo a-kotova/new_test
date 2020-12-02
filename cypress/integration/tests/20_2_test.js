@@ -25,11 +25,13 @@ describe('User able to change products quantity', () => {
         cy.log('WHEN user navigates to the cart AND cart has previously added products')
         Cart.navigateToCartDirectly().then(function ()  {
             cy.get('@products').then((products) => {
-                cy.log('AND each added product is correct')
-                cy.log('AND price of each added product is correct')
                 products.forEach((product, index) => {
-                    Cart.productName.eq(index).should('have.text', `${products[index].title}`)
-                    Cart.productPrice.eq(index).should(($value) => {
+                    cy.log('AND each added product is correct')
+                    Cart.getProductName.eq(index).then(($name) => {
+                        expect($name).to.contain( `${products[index].title}`)
+                    });
+                    cy.log('AND price of each added product is correct')
+                    Cart.getProductPrice.eq(index).then(($value) => {
                         let price = $value.text();
                         price = parseFloat(price.replace('$', ''));
                         expect(price).to.eq(products[index].price);

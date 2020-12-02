@@ -17,21 +17,21 @@ describe('User adds products to cart', () => {
         Store.getProductPrice(item).then(() => {
           Store.buyProduct(product, item);
           cy.log('THEN added product is displayed in the cart');
-          Cart.productName.should('include.text', item.title);
+          Cart.getProductName.should('include.text', item.title);
           if (item.color) {
             cy.log('AND product has correct color');
-            Cart.productName.should('include.text', item.color);
+            Cart.getProductName.should('include.text', item.color);
           }
           cy.log('AND product quantity is correct');
           Cart.totalQty.should('have.text', '(1 item)');
           cy.log('AND product price is correct');
-          Cart.productPrice.should(($value) => {
+          Cart.getProductPrice.should(($value) => {
             let price = $value.text();
             price = parseFloat(price.replace('$', ''));
             expect(price).to.eq(item.price);
           });
           cy.log('AND total price is correct');
-          Cart.totalPrice.should(($value) => {
+          Cart.fetchTotalPrice.should(($value) => {
             let price = $value.text();
             price = parseFloat(price.replace('$', ''));
             expect(price).to.eq(item.price);

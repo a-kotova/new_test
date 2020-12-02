@@ -26,7 +26,7 @@ class Store {
         return cy.get('.primary.transaction.button').first();
     }
 
-    get activeColors () {
+    get getActiveColors () {
         return cy.get('.mqn-button:not([disabled="disabled"])')
             .parents('.mqn-product-collection__card__meta');
     }
@@ -39,25 +39,25 @@ class Store {
         return this.searchResult.click();
     }
 
-    getProductName (item_object) {
+    getProductName (itemObject) {
         cy.get('div[jsname="r4nke"] > h1').invoke('text').then((text) => {
-            item_object['title'] = text;
+            itemObject['title'] = text;
         });
     }
 
-    getProductPrice (item_object) {
+    getProductPrice(itemObject) {
         return cy.get('.is-price').first().invoke('text').then((text) => {
-            item_object['price'] = parseFloat(text.replace('$', ''));
+            itemObject['price'] = parseFloat(text.replace('$', ''));
         });
     }
 
-    buyAnyColor (item_object) {
+    buyAnyColor (itemObject) {
         cy.contains("Pick your color").should("be.visible");
-        this.activeColors.then(colorContainers => {
+        this.getActiveColors.then(colorContainers => {
             cy.wrap(chance.pickone(colorContainers)).then((colorContainer) => {
                 cy.wrap(colorContainer).find('.mqn-product-collection__card__headline').invoke('text').then((text) => {
-                    item_object['color'] = text;
-                    cy.log(item_object.color)
+                    itemObject['color'] = text;
+                    cy.log(itemObject.color)
                 })
                 cy.wrap(colorContainer).find('div.mqn-product-collection__card__buttons > button').click()
             })
